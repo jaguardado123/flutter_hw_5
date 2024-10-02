@@ -49,8 +49,8 @@ To access variables in the Task class, use `widget.whatever` in the _TaskState c
 ```dart
 
 class Task extends StatefulWidget {
-  // Make sure to use final keyword
-  final String whatever;
+  // Variables in a StatefulWidget don't require the final keyword.
+  String whatever;
 
   // Constructor
   const Task({Key? key, required this.whatever});
@@ -67,5 +67,3 @@ class _TaskState extends State<Task> {
 }
 
 ```
-
-For Flutter Version 3, we can't update
