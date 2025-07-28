@@ -1,4 +1,4 @@
-# hw4
+# Homework 5 - Refactoring
 
 For this homework you will need to refactor some code.
 
@@ -24,7 +24,7 @@ Task(
 After refactoring the Task Widget replace the [ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html) to use [ListView.builder()](https://flutter.dev/docs/cookbook/lists/long-lists) to dynamically make tasks.
 
 Two arrays have been provided **taskTitles** and **taskStates** they  hold the title and inital state of each task.
-You will need to used this arrays in the [ListView.builder()](https://flutter.dev/docs/cookbook/lists/long-lists) to generate the tasks.
+You will need to used these arrays in the [ListView.builder()](https://flutter.dev/docs/cookbook/lists/long-lists) to generate the tasks.
 
 ```dart
 
@@ -49,19 +49,21 @@ To access variables in the Task class, use `widget.whatever` in the _TaskState c
 ```dart
 
 class Task extends StatefulWidget {
-  // Variables in a StatefulWidget don't require the final keyword.
-  String whatever;
+  // You have to initialize the variable when declaring.
+  String whatever = '';
 
-  // Constructor
-  const Task({Key? key, required this.whatever});
+  // Constructor, similar to Stateless Widget, but remove const keyword
+  Task({Key? key, required this.whatever});
 
   @override
   State<Task> createState() => _TaskState();
 }
 
 class _TaskState extends State<Task> {
+
   @override
   Widget build(BuildContext context) {
+    // You can modify widget.whatever like normal variable.
     return Text(widget.whatever);
   }
 }
