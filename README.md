@@ -69,3 +69,13 @@ class _TaskState extends State<Task> {
 }
 
 ```
+
+<br/>
+
+## Grading Criteria
+
+| Task | Value of each task | Possible Points Lost |
+|---|---|---|
+| Refactoring |  | If no refactoring is done, 0 points will be awarded. |
+| Functionality |  | If checkboxes no longer work, up to 50 points may be lost. |
+| | 100 points total | |
